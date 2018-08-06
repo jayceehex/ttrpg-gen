@@ -1,14 +1,55 @@
 :root {
     --main-bg-colour: steelblue;
     --main-font-colour: whitesmoke;
+    --heading-font-colour: aliceblue;
+    --gutter: 20%;
 }
 
 body {
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: var(--main-bg-colour);
     color: var(--main-font-colour);
 }
 
-.wrapper {
-    margin: 0 20%;
+.container {
+    display: grid;
+    grid-template-columns: var(--gutter) auto auto auto auto auto auto var(--gutter);
+    grid-template-rows: 50px 300px auto 200px;
+}
+
+main {
+    grid-column-start: 2;
+    grid-column-end: -2;
+    grid-row-start: 3;
+    grid-row-end: -2;
+}
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: -2;
+    grid-row-end: -1;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-font-colour);
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.body-width {
+    grid-column-start: 2;
+    grid-column-end: -2;
+}
+
+.button {
+    border-width: 1px;
+    padding: 1em;
 }
