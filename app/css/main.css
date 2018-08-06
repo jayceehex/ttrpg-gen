@@ -1,5 +1,12 @@
+:root {
+    --main-bg-colour: steelblue;
+    --main-font-colour: whitesmoke;
+}
+
 body {
     font-size: 16px;
+    background-color: var(--main-bg-colour);
+    color: var(--main-font-colour);
 }
 
 .wrapper {
