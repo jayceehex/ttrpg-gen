@@ -1,8 +1,22 @@
 :root {
-    --main-bg-colour: steelblue;
-    --main-font-colour: whitesmoke;
-    --heading-font-colour: aliceblue;
+    
+/* PRIMARY VARIABLES */
+    --dark-mono: #333;
+    --mid-dark-mono: #555;
+    --light-mono: whitesmoke;
+    --hilite-primary: darkseagreen;
+    --hilite-secondary: goldenrod;
     --gutter: 20%;
+    --header-height: 30vh;
+    --footer-height: 200px;
+
+/* SECONDARY VARIABLES */
+    --main-bg-colour: var(--light-mono);
+    --footer-bg-colour: var(--mid-dark-mono);
+    --main-font-colour: var(--dark-mono);
+    --light-font-colour: var(--light-mono);
+    --heading-font-colour: var(--mid-dark-mono);
+    --icon-colour: var(--dark-mono);
 }
 
 body {
@@ -15,7 +29,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: var(--gutter) auto auto auto auto auto auto var(--gutter);
-    grid-template-rows: 50px 300px auto 200px;
+    grid-template-rows: 5vh var(--header-height) auto var(--footer-height);
 }
 
 main {
@@ -30,6 +44,9 @@ main {
     grid-column-end: -1;
     grid-row-start: -2;
     grid-row-end: -1;
+    padding: 10px var(--gutter);
+    background-color: var(--footer-bg-colour);
+    color: var(--light-font-colour);
 }
 
 
@@ -44,9 +61,22 @@ header {
     grid-row-end: 2;
 }
 
-.body-width {
-    grid-column-start: 2;
-    grid-column-end: -2;
+/* UTILITIES */
+
+.primary-bg {
+    background-color: var(--hilite-primary);
+}
+
+.secondary-bg {
+    background-color: var(--hilite-secondary);
+}
+
+.text-light {
+    color: var(--light-font-colour);
+}
+
+.text-dark {
+    color: var(--main-font-colour);
 }
 
 .button {
