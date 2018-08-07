@@ -61,6 +61,11 @@ header {
     grid-row-end: 2;
 }
 
+.icon {
+    color: var(--icon-colour);
+    width: 50px;
+}
+
 /* UTILITIES */
 
 .primary-bg {
