@@ -3,7 +3,7 @@
 /* PRIMARY VARIABLES */
     --dark-mono: #333;
     --mid-dark-mono: #555;
-    --light-mono: whitesmoke;
+    --light-mono: white;
     --hilite-primary: darkseagreen;
     --hilite-secondary: goldenrod;
     --gutter: 20%;
@@ -54,11 +54,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--heading-font-colour);
 }
 
-header {
+.head {
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: 2;
+    padding: 2rem var(--gutter);
 }
 
 .icon {
@@ -68,11 +69,11 @@ header {
 
 /* UTILITIES */
 
-.primary-bg {
+.highlight-primary {
     background-color: var(--hilite-primary);
 }
 
-.secondary-bg {
+.highlight-secondary {
     background-color: var(--hilite-secondary);
 }
 
