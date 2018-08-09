@@ -3,20 +3,23 @@
 /* PRIMARY VARIABLES */
     --dark-mono: #333;
     --mid-dark-mono: #555;
+    --mid-light-mono: #ccc;
     --light-mono: white;
     --hilite-primary: darkseagreen;
     --hilite-secondary: goldenrod;
     --gutter: 20%;
     --header-height: 30vh;
     --footer-height: 200px;
+    --border-radius: 3px;
 
 /* SECONDARY VARIABLES */
     --main-bg-colour: var(--light-mono);
-    --footer-bg-colour: var(--mid-dark-mono);
+    --footer-bg-colour: var(--light-mono);
     --main-font-colour: var(--dark-mono);
     --light-font-colour: var(--light-mono);
     --heading-font-colour: var(--mid-dark-mono);
     --icon-colour: var(--dark-mono);
+    --card-hover-bg: var(--hilite-primary);
 }
 
 body {
@@ -30,6 +33,10 @@ body {
     display: grid;
     grid-template-columns: var(--gutter) auto auto auto auto auto auto var(--gutter);
     grid-template-rows: 5vh var(--header-height) auto var(--footer-height);
+}
+
+main, section {
+    padding-bottom: 1rem;
 }
 
 main {
@@ -46,8 +53,7 @@ main {
     grid-row-end: -1;
     padding: 10px var(--gutter);
     background-color: var(--footer-bg-colour);
-    color: var(--light-font-colour);
-    border-top: 5px solid var(--hilite-secondary);
+    border-top: 5px solid var(--hilite-primary);
 }
 
 
@@ -60,7 +66,42 @@ h1, h2, h3, h4, h5, h6 {
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: 2;
+    display: flex;
+    justify-content: space-between;
     padding: 2rem var(--gutter);
+}
+
+.head h1 {
+    display: inline-block;
+}
+
+.nav {
+    text-transform: uppercase;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.main-nav li {
+    padding: 0 0.5rem;
+}
+
+.card {
+    border: 1px solid var(--mid-light-mono);
+    border-radius: var(--border-radius);
+    padding: 1rem 1.5rem;
+    transition: 0.1s ease-in-out;
+}
+
+.gen-list .card {
+    width: 20%;
+}
+
+.gen-list .card:hover {
+    background-color: var(--card-hover-bg);
+    color: var(--light-font-colour);
 }
 
 .icon {
@@ -69,6 +110,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* UTILITIES */
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
 
 .highlight-primary {
     background-color: var(--hilite-primary);
