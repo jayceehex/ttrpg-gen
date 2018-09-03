@@ -1,6 +1,8 @@
+/* VARIABLES */
+
 :root {
     
-/* PRIMARY VARIABLES */
+/* primary variables */
     --dark-mono: #333;
     --mid-dark-mono: #555;
     --mid-light-mono: #ccc;
@@ -12,7 +14,7 @@
     --footer-height: 200px;
     --border-radius: 3px;
 
-/* SECONDARY VARIABLES */
+/* secondary variables */
     --main-bg-colour: var(--light-mono);
     --footer-bg-colour: var(--light-mono);
     --main-font-colour: var(--dark-mono);
@@ -28,6 +30,12 @@ body {
     background-color: var(--main-bg-colour);
     color: var(--main-font-colour);
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-font-colour);
+}
+
+/* LAYOUT */
 
 .container {
     display: grid;
@@ -46,6 +54,8 @@ main {
     grid-row-end: -2;
 }
 
+/* FOOTER */
+
 .footer {
     grid-column-start: 1;
     grid-column-end: -1;
@@ -56,10 +66,7 @@ main {
     border-top: 5px solid var(--hilite-primary);
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    color: var(--heading-font-colour);
-}
+/* HEADER */
 
 .head {
     grid-column-start: 1;
@@ -75,6 +82,8 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
 }
 
+/* NAV */
+
 .nav {
     text-transform: uppercase;
 }
@@ -87,6 +96,8 @@ h1, h2, h3, h4, h5, h6 {
 .main-nav li {
     padding: 0 0.5rem;
 }
+
+/* CARDS */
 
 .card {
     border: 1px solid var(--mid-light-mono);
